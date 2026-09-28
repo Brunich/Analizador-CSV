@@ -53,11 +53,6 @@ npm run build   # tipos + build de producción
 
 Hecho con React 19, TypeScript y Vite. Necesita Node 22 o más nuevo (las pruebas corren TypeScript directo con Node).
 
-## Lo que sigue
-
-- Guardar reglas de negocio propias por tipo de reporte.
-- Comparar dos cortes del mismo reporte y ver qué cambió.
-
 ---
 
 Parte del [portafolio de Bruno Salas](https://bruno-portfolio-azure.vercel.app) · [GitHub](https://github.com/Brunich)
