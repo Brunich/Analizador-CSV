@@ -12,11 +12,11 @@ Encuentra duplicados, valores mal escritos, fechas mezcladas y reglas rotas, y c
 
 ## Cómo funciona
 
-1. **Lee.** Abre tu CSV en el navegador y detecta el tipo de cada columna.
-2. **Revisa.** Siete reglas buscan duplicados, mayúsculas y acentos distintos, fechas mezcladas, negativos y reglas de negocio.
-3. **Limpia.** Corrige lo mecánico con un clic y marca lo que requiere criterio.
-4. **Grafica.** Sugiere la gráfica que tiene sentido para tus columnas; la bajas en PNG o SVG, o copias los datos a Canva, Flourish o Datawrapper.
-5. **Pregunta.** El archivo se vuelve una tabla de SQLite dentro del navegador: escribe tu consulta o usa un ejemplo, y grafica el resultado.
+1. **Lee.** Reconoce el tipo de cada columna.
+2. **Revisa.** Duplicados, fechas mezcladas, valores mal escritos y reglas rotas.
+3. **Limpia.** Lo mecánico, con un clic. Lo demás, marcado.
+4. **Grafica.** Propone la gráfica y la baja en PNG o SVG.
+5. **Pregunta.** Consultas SQL sobre tu archivo, sin servidor.
 
 ## Qué hay adentro
 
