@@ -1,0 +1,1 @@
+{"desc": "Revisa y limpia un CSV en el navegador: duplicados, fechas mezcladas, reglas rotas; lo grafica y lo consultas en SQL. React + TypeScript + SQLite (WASM).", "topics": ["csv", "data-cleaning", "sqlite", "react", "typescript", "charts"]}
