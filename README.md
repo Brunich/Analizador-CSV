@@ -22,7 +22,8 @@ Encuentra duplicados, valores mal escritos, fechas mezcladas y reglas rotas, y c
 
 | Archivo | Qué hace |
 | --- | --- |
-| `src/csv.ts` | Lee el CSV (BOM, `;` o `,`, comillas, saltos de línea dentro de un campo) y perfila cada columna. |
+| `src/csv.ts` | Lee el CSV con cualquier separador (`,` `;` tabulador `|`) y codificación (UTF-8, Windows-1252 de Excel en español, UTF-16); tolera filas cortas o con datos de más sin perder nada, y perfila cada columna. |
+| `src/read-file.ts` | Abre CSV, TSV y Excel (.xlsx, .xls) con las mismas reglas. |
 | `src/quality.ts` | Las siete reglas: duplicados, variantes de mayúsculas y acentos, fechas mezcladas, negativos, vacíos y reglas de negocio. |
 | `src/CsvCharts.tsx` | Sugiere la gráfica según las columnas y la dibuja como SVG; exporta PNG, SVG, CSV o la copia para Canva, Flourish o Datawrapper. |
 | `src/CsvSql.tsx` | Convierte el archivo en una tabla de SQLite (sql.js, WebAssembly) para consultarla y graficar el resultado. |
@@ -36,6 +37,7 @@ La lógica está separada de la interfaz, así se prueba sin navegador (`tests/`
 - SQLite viene compilado a WebAssembly y sólo se descarga cuando abres la pestaña SQL, para que la página cargue ligera.
 - Las gráficas son SVG propio en vez de una librería: así se exportan tal cual a PNG o SVG y pesan poco.
 - Lo mecánico (espacios, mayúsculas, fechas) se corrige con un clic; lo que requiere criterio sólo se marca.
+- Abre lo que Excel guarda de verdad: acentos en Windows-1252, filas rotas y líneas vacías no tiran el archivo, y avisa qué ajustó. Probado con 60 000 filas (~2 s).
 
 ## Correrlo
 
@@ -53,7 +55,6 @@ Hecho con React 19, TypeScript y Vite. Necesita Node 22 o más nuevo (las prueba
 
 ## Lo que sigue
 
-- Leer Excel directo, sin pasarlo a CSV.
 - Guardar reglas de negocio propias por tipo de reporte.
 - Comparar dos cortes del mismo reporte y ver qué cambió.
 
